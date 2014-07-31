@@ -21,7 +21,7 @@
 			global $woocommerce;
 
 			$this->id = self::PAYMENT_METHOD;
-			$this->icon = plugins_url('resources/images/dotpay.png', __FILE__);
+			$this->icon = WOOCOMMERCE_DOTPAY_PLUGIN_URL . 'resources/images/dotpay.png';
 			$this->has_fields = false;
 			$this->title = 'Dotpay';
 			$this->description = __('Credit card payment via Dotpay', 'dotpay-payment-gateway');
@@ -124,7 +124,7 @@
 			' );
 
 	        ob_start();
-	            include(dirname(__FILE__) . '/frontend/templates/woocommerce-dotpay-payment-button.tpl.php');
+	            include(WOOCOMMERCE_DOTPAY_PLUGIN_DIR . '/frontend/templates/woocommerce-dotpay-payment-button.tpl.php');
 	            $html = ob_get_contents();
 	        ob_end_clean();
 

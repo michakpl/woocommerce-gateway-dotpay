@@ -8,7 +8,7 @@ Author: Michak
 Author URI: http://michak.pl
 Text Domain: dotpay-payment-gateway
 */
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'WPINC' ) ) exit; // Exit if accessed directly
 
 require_once dirname(__FILE__) . '/includes/required_plugins.php';
 
@@ -17,6 +17,9 @@ require_once dirname(__FILE__) . '/includes/required_plugins.php';
 * @ref http://www.woothemes.com/woocommerce/
 */
 function init_woocommerce_gateway_dotpay() {
+	define('WOOCOMMERCE_DOTPAY_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
+	define('WOOCOMMERCE_DOTPAY_PLUGIN_URL', plugin_dir_url( __FILE__ ));
+
 	require_once('includes/class.WCGatewayDotpay.php');
 }
 
