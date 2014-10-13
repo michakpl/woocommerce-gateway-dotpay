@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Gateway Dotpay
 Plugin URI: http://michak.pl/woocommerce-gateway-dotpay
 Description: Add a credit card payment gateway for Dotpay (Poland) to WooCommerce
-Version: 1.0
+Version: 1.1
 Author: Michak
 Author URI: http://michak.pl
 Text Domain: dotpay-payment-gateway

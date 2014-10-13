@@ -64,7 +64,13 @@
 		}
 
 		function process_payment( $order_id ) {
+			global $woocommerce;
+			
 			$order = new WC_Order( $order_id );
+
+			$order->reduce_order_stock();
+
+			$woocommerce->cart->empty_cart();
 
 			return array(
 				'result' 	=> 'success',
