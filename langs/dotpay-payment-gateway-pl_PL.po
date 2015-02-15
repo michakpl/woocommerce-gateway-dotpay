@@ -279,8 +279,8 @@ msgstr "Szczegóły Płatności"
 
 #: ../frontend/templates/woocommerce-dotpay-payment-button.tpl.php:21
 #, php-format
-msgid "Payment for order no. %1$s (%2$s)"
-msgstr "Płatność za zamówienie nr: %1$s (%2$s)"
+msgid "Payment for order no. %1$s"
+msgstr "Płatność za zamówienie nr: %1$s"
 
 #: ../frontend/templates/woocommerce-dotpay-payment-button.tpl.php:22
 msgid "Continue"
