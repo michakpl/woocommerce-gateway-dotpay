@@ -58,7 +58,13 @@
                                         'label' => __('Only payment simulation. Forced PLN.', 'dotpay-payment-gateway'),
 					'type' => 'checkbox',
                                         'default' => 'yes'
-				),                                      
+				),     
+				'dotpay_chk' => array(
+					'title' => __('CHK Blockade', 'dotpay-payment-gateway'),
+                                        'label' => __('Secure payment parameters (optional)', 'dotpay-payment-gateway'),
+					'type' => 'checkbox',
+                                        'default' => 'no'
+				),                              
 				'title' => array(
 					'title' => __('Title', 'woocommerce'),
 					'type' => 'text',
@@ -123,7 +129,8 @@
                         $description = get_bloginfo('name').': Order id: '.esc_attr( $order_id );
                         $chk = $dotpay_id.$amount.$payment_currency.$description.$control.$this->get_option( 'dotpay_pin' );
                         $chk = rawurlencode($chk);
-                        $signature = hash('md5', $chk);
+                        if ($this->get_option( 'dotpay_chk' ) == "yes")
+                            $signature = hash('md5', $chk);
                         $api_version = "legacy";
 			wc_enqueue_js( '
 				$.blockUI({
