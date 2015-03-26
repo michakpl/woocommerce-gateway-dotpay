@@ -176,14 +176,14 @@
                         if(!$this->check_urlc_legacy($data))
                                 die('WooCommerce - Wrong MD5, check PIN!');                        
 
-                        $totalAmount = str_replace(',', '.', $order->get_total());
+                        $totalAmount = $order->get_total();
+                        $totalAmount = str_replace(',', '.', $totalAmount);
                         $totalAmount = round($totalAmount,2);
                         $dotpay_amount = round($data['orginal_amount'],2);
                         if ($totalAmount <> $dotpay_amount) 
                                 die('WooCommerce - INCORRECT AMOUNT '.$totalAmount.' <> '.$dotpay_amount);                                        
 
-                        if (strpos($totalAmount, '.') == false)
-                                $totalAmount .= ".00";
+                        $totalAmount = number_format($totalAmount, 2);
                         $totalAmount .= " ".get_woocommerce_currency();
                         $orginal_amount = trim($data['orginal_amount']);
                         if ($totalAmount <> $orginal_amount) 
