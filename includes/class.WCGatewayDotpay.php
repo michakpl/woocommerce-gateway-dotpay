@@ -169,8 +169,10 @@
                         $data = $_POST;
                         $order = new WC_Order($data['control']);
                         
-                        if($_SERVER['REMOTE_ADDR'] <> self::DOTPAY_IP)
+                        if($_SERVER['REMOTE_ADDR'] <> self::DOTPAY_IP){
                                 wp_redirect( $this->get_return_url( $order ) );
+				exit();
+			}
 
                         $data["dotpay_pin"] = $this->get_option('dotpay_pin');
                         if(!$this->check_urlc_legacy($data))
