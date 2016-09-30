@@ -1,3 +1,5 @@
+### This plugin is no longer maintained. Please use [dotpay/WooCommerce2] (https://github.com/dotpay/WooCommerce2) ###
+
 WooCommerce Dotpay Gateway
 =====================
 
@@ -6,7 +8,7 @@ WooCommerce Dotpay Gateway
 ####Wtyczka dla WordPress/WooCommerce dodająca bramkę płatności Dotpay####
 
 ### Instrukcja: ###
-1. Pobierz wtyczkę **WooCommerce.zip** (https://github.com/dotpay/WooCommerce/releases/latest)
+1. Pobierz wtyczkę **WooCommerce.zip** (https://github.com/michakpl/woocommerce-gateway-dotpay/releases/latest)
 2. Umieść folder z wtyczką w wp-content/plugins
 3. Aktywuj wtyczkę w Kokpicie
 4. Przjedź do zakładki Zamówienia w WooCommerce Ustawienia, wtedy aktywuj i skonfiguruj bramkę Dotpay
@@ -16,7 +18,7 @@ WooCommerce Dotpay Gateway
 ####WordPress/WooCommerce plugin adding form based Dotpay payment gateway####
 
 ### Instructions: ###
-1. Download the plugin **WooCommerce.zip** (https://github.com/dotpay/WooCommerce/releases/latest)
+1. Download the plugin **WooCommerce.zip** (https://github.com/michakpl/woocommerce-gateway-dotpay/releases/latest)
 2. Put plugin folder inside wp-content/plugins
 3. Activate plugin in Dashboard
 4. Go to Checkout tab in WooCommerce Settings, then enable and configure Dotpay gateway
